@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>清风润笔书自强 文廉相融助残行 — 苍溪残疾人文创成果展</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red-deep: #8B1A1A;
+    --red-primary: #C41E3A;
+    --red-light: #E85D6F;
+    --gold: #C9A96E;
+    --gold-light: #D4B87A;
+    --ink: #1A1A2E;
+    --ink-light: #3A3A5C;
+    --paper: #F5F0E8;
+    --paper-dark: #E8DFD0;
+    --jade: #5B8C6A;
+    --bamboo: #7A9E5B;
+    --bamboo-dark: #4A6E2B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+    line-height: 1.8;
+  }
+
+  .serif { font-family: 'Noto Serif SC', serif; }
+
+  /* Rice paper texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,26,26,0.012) 2px, rgba(139,26,26,0.012) 4px);
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(196,30,58,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(201,169,110,0.06) 0%, transparent 50%),
+      var(--paper);
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    border: 1px solid rgba(196,30,58,0.08);
+    border-radius: 50%;
+    animation: breathe 8s ease-in-out infinite;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -15%; left: -5%;
+    width: 400px; height: 400px;
+    border: 1px solid rgba(201,169,110,0.1);
+    border-radius: 50%;
+    animation: breathe 10s ease-in-out infinite reverse;
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(196,30,58,0.06);
+    border: 1px solid rgba(196,30,58,0.12);
+    border-radius: 100px;
+    padding: 6px 20px;
+    font-size: 13px;
+    color: var(--red-primary);
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+  }
+
+  .hero-badge .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--red-primary);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(2.2rem, 7vw, 4.2rem);
+    font-weight: 900;
+    color: var(--ink);
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-title .accent { color: var(--red-primary); position: relative; display: inline-block; }
+  .hero-title .accent::after {
+    content: ''; position: absolute;
+    bottom: 4px; left: 0; right: 0;
+    height: 3px; background: var(--gold);
+    border-radius: 2px; opacity: 0.6;
+  }
+
+  .hero-sub {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+    color: var(--ink-light);
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    line-height: 1.9;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stat { text-align: center; }
+
+  .stat-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--red-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--ink-light);
+    letter-spacing: 0.08em;
+  }
+
+  .hero-duo {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .duo-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(201,169,110,0.2);
+    border-radius: 60px;
+    padding: 10px 24px 10px 12px;
+    backdrop-filter: blur(6px);
+  }
+
+  .duo-icon {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #fff;
+  }
+
+  .duo-icon.poet { background: var(--red-primary); }
+  .duo-icon.artisan { background: var(--bamboo); }
+
+  .duo-text .duo-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .duo-text .duo-desc {
+    font-size: 12px;
+    color: var(--ink-light);
+  }
+
+  /* ============ DIVIDER ============ */
+  .ink-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto;
+    max-width: 200px;
+    opacity: 0.4;
+  }
+
+  /* ============ SECTION COMMON ============ */
+  .section-container {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+  }
+
+  .section-title .sub {
+    display: block;
+    font-size: 0.5em;
+    font-weight: 400;
+    color: var(--ink-light);
+    margin-top: 0.5rem;
+  }
+
+  /* ============ DOUBLE PORTRAIT ============ */
+  .portrait-section {
+    padding: 5rem 2rem;
+    background:
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-dark) 100%);
+  }
+
+  .portrait-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .portrait-card {
+    background: rgba(255,255,255,0.65);
+    border: 1px solid rgba(201,169,110,0.15);
+    border-radius: 6px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .portrait-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(139,26,26,0.08);
+  }
+
+  .portrait-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .portrait-card.poet-card::before {
+    background: linear-gradient(90deg, var(--red-primary), var(--gold));
+  }
+
+  .portrait-card.artisan-card::before {
+    background: linear-gradient(90deg, var(--bamboo), var(--gold));
+  }
+
+  .portrait-type {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    padding: 3px 12px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .poet-card .portrait-type {
+    background: rgba(196,30,58,0.06);
+    color: var(--red-primary);
+    border: 1px solid rgba(196,30,58,0.12);
+  }
+
+  .artisan-card .portrait-type {
+    background: rgba(122,158,91,0.06);
+    color: var(--bamboo-dark);
+    border: 1px solid rgba(122,158,91,0.15);
+  }
+
+  .portrait-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+  }
+
+  .portrait-penname {
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .portrait-bio {
+    font-size: 14px;
+    color: var(--ink-light);
+    line-height: 1.9;
+    margin-bottom: 1.25rem;
+  }
+
+  .portrait-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .portrait-tag {
+    font-size: 11px;
+    padding: 3px 12px;
+    border-radius: 100px;
+  }
+
+  .poet-card .portrait-tag {
+    border: 1px solid rgba(196,30,58,0.12);
+    color: var(--red-primary);
+    background: rgba(196,30,58,0.02);
+  }
+
+  .artisan-card .portrait-tag {
+    border: 1px solid rgba(122,158,91,0.15);
+    color: var(--bamboo-dark);
+    background: rgba(122,158,91,0.02);
+  }
+
+  /* ============ POETRY SECTION ============ */
+  .poetry-section {
+    padding: 5rem 2rem;
+    background: var(--paper);
+  }
+
+  .poem-card {
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(201,169,110,0.15);
+    border-radius: 4px;
+    padding: 2.5rem 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    backdrop-filter: blur(8px);
+  }
+
+  .poem-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(180deg, var(--red-primary), var(--gold));
+    border-radius: 2px 0 0 2px;
+  }
+
+  .poem-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--red-deep);
+    margin-bottom: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .poem-body {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    line-height: 2.2;
+    white-space: pre-line;
+  }
+
+  .poem-body .highlight {
+    color: var(--red-primary);
+    font-weight: 600;
+  }
+
+  .poem-meta {
+    margin-top: 1.25rem;
+    font-size: 13px;
+    color: var(--ink-light);
+    opacity: 0.7;
+    font-style: italic;
+  }
+
+  /* ============ ARTISAN SECTION ============ */
+  .artisan-section {
+    padding: 5rem 2rem;
+    background:
+      linear-gradient(180deg, var(--paper-dark) 0%, var(--paper) 100%);
+  }
+
+  .artisan-timeline {
+    position: relative;
+    margin-top: 2.5rem;
+    padding-left: 2rem;
+  }
+
+  .artisan-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 2px; height: 100%;
+    background: linear-gradient(180deg, var(--bamboo), var(--gold), var(--bamboo));
+    opacity: 0.3;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item:last-child { padding-bottom: 0; }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 6px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--bamboo);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 3px rgba(122,158,91,0.2);
+  }
+
+  .timeline-year {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--bamboo-dark);
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.05em;
+  }
+
+  .timeline-text {
+    font-size: 14px;
+    color: var(--ink-light);
+    line-height: 1.8;
+  }
+
+  .timeline-text strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ============ THREE PILLARS ============ */
+  .pillars-section {
+    padding: 5rem 2rem;
+    background: var(--paper);
+  }
+
+  .pillars-grid {
+    max-width: 960px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .pillar-card {
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(201,169,110,0.12);
+    border-radius: 4px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(139,26,26,0.08);
+  }
+
+  .pillar-icon {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #fff;
+  }
+
+  .pillar-icon.red { background: var(--red-primary); }
+  .pillar-icon.gold { background: var(--gold); }
+  .pillar-icon.jade { background: var(--bamboo); }
+
+  .pillar-card h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .pillar-card .pillar-sub {
+    font-size: 12px;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .pillar-card p {
+    font-size: 14px;
+    color: var(--ink-light);
+    line-height: 1.8;
+  }
+
+  /* ============ QUOTE ============ */
+  .quote-section {
+    padding: 5rem 2rem;
+    background: var(--ink);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quote-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(196,30,58,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 50%, rgba(201,169,110,0.1) 0%, transparent 60%);
+  }
+
+  .quote-content {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote-mark {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: -1rem;
+  }
+
+  .quote-text {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(1.15rem, 2.8vw, 1.6rem);
+    font-weight: 600;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .quote-attr {
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  /* ============ COLLAB SECTION ============ */
+  .collab-section {
+    padding: 5rem 2rem;
+    background: var(--paper);
+  }
+
+  .collab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .collab-card {
+    background: rgba(255,255,255,0.5);
+    border: 1px solid rgba(201,169,110,0.1);
+    border-radius: 6px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .collab-card::after {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    opacity: 0.04;
+  }
+
+  .collab-card.red-tint::after { background: var(--red-primary); }
+  .collab-card.green-tint::after { background: var(--bamboo); }
+
+  .collab-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .collab-card h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+  }
+
+  .collab-card p {
+    font-size: 14px;
+    color: var(--ink-light);
+    line-height: 1.8;
+  }
+
+  .collab-card .stat-inline {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  .collab-card .stat-inline .num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--red-primary);
+  }
+
+  /* ============ AWARDS ============ */
+  .award-section {
+    padding: 5rem 2rem;
+    background:
+      linear-gradient(180deg, var(--paper-dark) 0%, var(--paper) 100%);
+  }
+
+  .awards-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .award-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(201,169,110,0.15);
+    border-radius: 6px;
+    position: relative;
+  }
+
+  .award-medal {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+  }
+
+  .award-medal.gold-medal {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    box-shadow: 0 4px 20px rgba(201,169,110,0.3);
+  }
+
+  .award-medal.bamboo-medal {
+    background: linear-gradient(135deg, var(--bamboo), var(--jade));
+    box-shadow: 0 4px 20px rgba(122,158,91,0.2);
+  }
+
+  .award-medal svg { width: 36px; height: 36px; }
+
+  .award-person {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+  }
+
+  .award-work {
+    font-size: 14px;
+    color: var(--red-deep);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .award-detail {
+    font-size: 13px;
+    color: var(--ink-light);
+    line-height: 1.7;
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--paper-dark);
+    border-top: 1px solid rgba(201,169,110,0.15);
+  }
+
+  .footer-brand {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--red-deep);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-info {
+    font-size: 13px;
+    color: var(--ink-light);
+    opacity: 0.6;
+    line-height: 1.8;
+  }
+
+  /* ============ ANIMATIONS ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    .portrait-duo { grid-template-columns: 1fr; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .awards-duo { grid-template-columns: 1fr; }
+    .collab-grid { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    .hero-duo { gap: 1rem; }
+    .poem-card { padding: 1.5rem; }
+    .portrait-tags { justify-content: center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { transition: none; opacity: 1; transform: none; }
+    .hero::before, .hero::after { animation: none; }
+    .hero-badge .dot { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    <span>清廉机关建设侧记 · 第③期</span>
+  </div>
+  <h1 class="hero-title">
+    清风润笔书<span class="accent">自强</span><br>
+    文廉相融助残行
+  </h1>
+  <p class="hero-sub serif">
+    一文一艺，同根同源。轮椅诗人以笔为灯，笋壳匠人以刀为翼——苍溪残疾人文创成果的生动注脚
+  </p>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">440+</div>
+      <div class="stat-label">川渝征文参赛作品</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">笋壳画作品陈列</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">82</div>
+      <div class="stat-label">入户评残服务</div>
+    </div>
+  </div>
+  <div class="hero-duo">
+    <div class="duo-badge">
+      <div class="duo-icon poet">文</div>
+      <div class="duo-text">
+        <div class="duo-name">王小泗</div>
+        <div class="duo-desc">轮椅诗人 · 《街口》获三类奖</div>
+      </div>
+    </div>
+    <div class="duo-badge">
+      <div class="duo-icon artisan">艺</div>
+      <div class="duo-text">
+        <div class="duo-name">马全模</div>
+        <div class="duo-desc">笋壳画匠 · 四川省乡土文化能人</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Double Portrait -->
+<section class="portrait-section">
+  <div class="section-container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-eyebrow">一文一艺</div>
+      <h2 class="section-title">
+        笔墨抒心声，巧手绘春秋
+        <span class="sub">两位残疾人创作者，两种抵达远方的方式</span>
+      </h2>
+    </div>
+    <div class="portrait-duo">
+      <div class="portrait-card poet-card reveal">
+        <div class="portrait-type">一文 · 诗歌</div>
+        <div class="portrait-name">王小泗</div>
+        <div class="portrait-penname">笔名：王仕凯</div>
+        <div class="portrait-bio">
+          61岁，肢体一级残疾，常年以轮椅代步，却从未困住内心的辽阔。以轮椅视角书写生活，从廉租房到滨江路，从陵江古渡口到缙云山黄昏，在日常街景中捕捉微小而温暖的诗意。
+        </div>
+        <div class="portrait-tags">
+          <span class="portrait-tag">苍溪本土</span>
+          <span class="portrait-tag">肢体一级残疾</span>
+          <span class="portrait-tag">诗人</span>
+          <span class="portrait-tag">轮椅视角</span>
+        </div>
+      </div>
+      <div class="portrait-card artisan-card reveal">
+        <div class="portrait-type">一艺 · 笋壳画</div>
+        <div class="portrait-name">马全模</div>
+        <div class="portrait-penname">四川省"乡土文化能人"</div>
+        <div class="portrait-bio">
+          自幼患血友病，15岁致残，却从废弃笋壳中找到人生方向。无师无基，全凭自学摸索，将农耕废料变成精美艺术品，二十年如一日，用刻刀在笋壳上雕出"倔强"人生。
+        </div>
+        <div class="portrait-tags">
+          <span class="portrait-tag">元坝镇文江村</span>
+          <span class="portrait-tag">笋壳画非遗</span>
+          <span class="portrait-tag">乡土文化能人</span>
+          <span class="portrait-tag">以残助残</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Poetry -->
+<section class="poetry-section">
+  <div class="section-container">
+    <div class="reveal">
+      <div class="section-eyebrow">获奖作品</div>
+      <h2 class="section-title">《街口》组诗</h2>
+    </div>
+
+    <div class="poem-card reveal">
+      <div class="poem-title">街 口</div>
+      <div class="poem-body">从廉租房出来，过九曲溪
+就到了滨江路，花卉，竹影，塔柏
+从众目里起身，循着露珠的意志
+
+沿着一个斜长的路口
+我们迈过斑马线，就像一个激越的
+符号，让我装满流沙的身体
+喂养一帧虚设的美景
+
+其间，有那么一会儿，我跟着一只蝴蝶
+通过无障碍甬道。来到一个
+新开的茶铺，向老板要了杯热茶</div>
+      <div class="poem-meta">文 / 王小泗</div>
+    </div>
+
+    <div class="poem-card reveal">
+      <div class="poem-title">屋 外</div>
+      <div class="poem-body">许多次，我把轮椅摇到院外
+阳光、清风，花香，鸟语
+
+<span class="highlight">远方的尽头，仍然是远方
+无路可退的时候，远方着实令人向往</span>
+
+地面隆起，天空中有着太多的飞行
+傍晚的落日，仿佛从悬崖上露出的手
+天地广阔，没有一处被遗忘的小草</div>
+      <div class="poem-meta">选自《街口》组诗</div>
+    </div>
+
+    <div class="poem-card reveal">
+      <div class="poem-title">缙云山的黄昏</div>
+      <div class="poem-body">当晚霞的余烬，在绵延的缙云山
+燃烧，半开半启的天空里
+晚祷的钟声，悲怆而空冥
+
+那棵千年柏树，盘根错节
+矗立山头的风，怅望白云竹海
+山河万里，从山脚流过的嘉陵江
+点点船帆，白云搁浅的山头
+飞鸟滑过的痕迹
+<span class="highlight">来不及隐藏，每个瞬间
+都充满人间的悲欢与离合</span></div>
+      <div class="poem-meta">选自《街口》组诗</div>
+    </div>
+  </div>
+</section>
+
+<!-- Artisan Timeline -->
+<section class="artisan-section">
+  <div class="section-container">
+    <div class="reveal">
+      <div class="section-eyebrow">匠心筑梦</div>
+      <h2 class="section-title">马全模：笋壳上的倔强人生</h2>
+    </div>
+    <div class="artisan-timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-year">2008 年</div>
+        <div class="timeline-text">用废弃笋壳为妹妹赶制一幅<strong>笋壳画</strong>作新婚礼物，从此踏上艺术创作之路</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2011 年</div>
+        <div class="timeline-text">在县残联推荐下参加<strong>广元市首届残疾人文化艺术周</strong>，作品《他乡》获工艺品类二等奖</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2022 年</div>
+        <div class="timeline-text">在市县残联帮扶下，建起<strong>"笋衣画坊"</strong>——从选址到建成、设施配备到运营，全程公开透明</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2023 年</div>
+        <div class="timeline-text">获评四川省<strong>"乡土文化能人"</strong>，画坊陈列精美画作50余幅，主动传帮带唐安智、李静等残疾人</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">至 今</div>
+        <div class="timeline-text">从"受助者"到"助人者"，以<strong>先富带后富</strong>的星火照亮更多残疾人创业路</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Three Pillars -->
+<section class="pillars-section">
+  <div class="section-container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-eyebrow">党建引领</div>
+      <h2 class="section-title">文化助残的苍溪实践</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <div class="pillar-icon red">铸</div>
+        <h4>铸魂正风</h4>
+        <div class="pillar-sub">制度护航文化公平</div>
+        <p>三级程序阳光评审，杜绝人情稿、关系稿。笋衣画坊建设全程公开透明，让帮扶资源精准落到最需要的人身上。</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-icon gold">匠</div>
+        <h4>匠心筑梦</h4>
+        <div class="pillar-sub">帮扶点亮自强星火</div>
+        <p>党员干部深入乡镇逐户走访，建立人才信息库。发现一个、培养一个、带动一批，从受助者到助人者的身份之变。</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-icon jade">融</div>
+        <h4>廉融共进</h4>
+        <div class="pillar-sub">文化赋能残健发展</div>
+        <p>文化器材采购透明、活动阳光规范、资金专款专用。多部门协同，清廉乡村旅游串珠成景。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quote -->
+<section class="quote-section">
+  <div class="quote-content reveal">
+    <div class="quote-mark">"</div>
+    <div class="quote-text">
+      我们推选作品、扶持项目，<br>
+      看的是质量、比的是真情，<br>
+      绝不让"人情分"伤了<br>
+      残疾人创作者的心。
+    </div>
+    <div class="quote-attr">县残联相关负责人</div>
+  </div>
+</section>
+
+<!-- Collaboration -->
+<section class="collab-section">
+  <div class="section-container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-eyebrow">大党建格局</div>
+      <h2 class="section-title">
+        多部门协同
+        <span class="sub">清廉乡村 + 文化助残的深度融合</span>
+      </h2>
+    </div>
+    <div class="collab-grid">
+      <div class="collab-card red-tint reveal">
+        <div class="collab-icon">🏛️</div>
+        <h4>廉洁院落示范点</h4>
+        <p>县纪委监委将马全模"廉洁院落"作为廉政文化建设示范点，联动组织部、宣传部等多部门，在文家角村建成"清风广场""清风书屋"等廉洁文化阵地。</p>
+      </div>
+      <div class="collab-card green-tint reveal">
+        <div class="collab-icon">🛤️</div>
+        <h4>清廉乡村旅游线路</h4>
+        <p>串珠成景，形成可学、可游、可赏、可品、可购的清廉乡村旅游品牌线路。让承载孝廉精神的笋壳画走南闯北，既富口袋又富"脑袋"。</p>
+      </div>
+      <div class="collab-card red-tint reveal">
+        <div class="collab-icon">📋</div>
+        <h4>巡察整改提质增效</h4>
+        <p>2023年县委第三巡察组开展常规巡察，县残联直面问题、立行立改，完善"三重一大"决策机制，规范惠残资金使用管理。</p>
+      </div>
+      <div class="collab-card green-tint reveal">
+        <div class="collab-icon">🏠</div>
+        <h4>入户评残便民服务</h4>
+        <p>建立入户评残便民服务机制，已为
+          <span class="stat-inline"><span class="num">82</span>名</span>
+          困难残疾人落实入户评残需求，以巡察整改推动服务提质增效。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Awards -->
+<section class="award-section">
+  <div class="section-container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-eyebrow">获奖殊荣</div>
+      <h2 class="section-title">一文一艺，双花绽放</h2>
+    </div>
+    <div class="awards-duo">
+      <div class="award-card reveal">
+        <div class="award-medal gold-medal">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L28.9 17.1H43L31.5 25.4L35.8 39L24 30L12.2 39L16.5 25.4L5 17.1H19.1L24 4Z" fill="#8B1A1A"/>
+          </svg>
+        </div>
+        <div class="award-person">王小泗</div>
+        <div class="award-work">《街口》组诗</div>
+        <div class="award-detail">
+          "笔尖微光"川渝残疾人征文大赛<br>三类作品奖<br>
+          <span style="font-size:12px;color:var(--ink-light);">440余篇参赛作品 · 重庆/四川残联联合主办</span>
+        </div>
+      </div>
+      <div class="award-card reveal">
+        <div class="award-medal bamboo-medal">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L28.9 17.1H43L31.5 25.4L35.8 39L24 30L12.2 39L16.5 25.4L5 17.1H19.1L24 4Z" fill="#4A6E2B"/>
+          </svg>
+        </div>
+        <div class="award-person">马全模</div>
+        <div class="award-work">笋壳画艺术</div>
+        <div class="award-detail">
+          四川省"乡土文化能人"<br>广元市残疾人文化艺术周二等奖<br>
+          <span style="font-size:12px;color:var(--ink-light);">笋衣画坊 · 50余幅作品 · 传帮带多人</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-brand">苍直党建</div>
+  <div class="footer-info">
+    苍溪县残疾人联合会 供稿<br>
+    党建引领 · 文化助残 · 残健融合
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
